@@ -1,0 +1,109 @@
+.user-details {
+  display: flex;
+  flex-direction: row; /* Kartları yan yana göster */
+  justify-content: space-between; /* Eşit boşluk bırak */
+  align-items: flex-start; /* Kartların üstte hizalanmasını sağlar */
+  min-height: 100vh;
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  gap: 20px; /* Kartlar arasındaki boşluk */
+}
+
+.user-details .card,
+.answer-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 20px;
+  flex: 1; /* Kartların eşit genişlikte olmasını sağlar */
+  max-width: 45%; /* Maksimum genişlik */
+}
+
+.user-details .card {
+  text-align: center;
+}
+
+.answer-section textarea {
+  width: 96%; /* Genişlik kutunun tamamını kaplar */
+  height: 330px; /* Daha uygun bir yükseklik */
+  border: 1px solid #50093a;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.answer-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #43054e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer-section button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.user-details .user-photos {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Resimler arasındaki boşluk */
+}
+
+.user-details .user-photo {
+  width: 150px; /* Daha küçük genişlik */
+  height: 150px; /* Daha küçük yükseklik */
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  cursor: pointer; /* Tıklanabilir olduğunu belirtir */
+  transition: transform 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.user-details .user-photo:hover {
+  transform: scale(1.1); /* Üzerine gelindiğinde biraz büyüt */
+}
+
+.modal {
+  display: none; /* Varsayılan olarak gizli */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Arka plan karartması */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.modal.active {
+  display: flex; /* Aktif olduğunda modal göster */
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+

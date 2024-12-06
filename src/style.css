@@ -1,0 +1,50 @@
+.client-dashboard {
+    background-image: url('./img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    border-bottom: 2px solid #ffffff; /* Beyaz renkte alt border */
+    padding-bottom: 10px;
+
+}
+.background {
+    background-image: url('./img/background.png');
+    background-size: cover;
+    min-height: 100vh;
+}
+  
+  
+.welcome-message {
+padding: 20px;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.ant-card {
+background-color: white !important; /* Kartların arka planını beyaz yapar */
+color: black !important; /* Yazıların siyah olmasını sağlar */
+}
+
+.ant-card-meta-title, .ant-card-meta-description {
+color: black !important; /* Meta verilerin yazı rengini siyah yapar */
+}
+
+.logo-image {
+    width: 100px; /* Logonun genişliği */
+    height: 100px; /* Logonun yüksekliği */
+    border-radius: 50%; /* Yuvarlak yapmak için */
+    margin-bottom: 1rem; /* Altına boşluk eklemek için */
+}
+
+.login-page a {
+color: #4caf50;
+text-decoration: none;
+font-size: 0.9rem;
+}
+
+.login-page a:hover {
+text-decoration: underline;
+}

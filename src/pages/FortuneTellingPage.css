@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../img/background.png'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #131212; /* Yazı rengini arka plana uyacak şekilde beyaz yap */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz arka plan */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .card h2,
+  .card h3 {
+    margin: 10px 0;
+  }
+  
+  .category-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .category-card label {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-card label:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .category-card input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .photos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .photos-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Görseller orantılı şekilde küçültülür */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  button {
+    background: rgba(74, 6, 77, 0.8);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background: rgba(0, 0, 0, 1);
+  }
+  

@@ -1,0 +1,93 @@
+/* Genel sayfa stili */
+.login-page {
+    background-image: url('./img/background.png'); /* Arka plan resminin yolu */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* Login kartı stili */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Kartın şeffaf beyaz arka planı */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ortalamak için */
+  }
+  
+/* Başlık stili */
+.login-card h1 {
+    margin-bottom: 1.5rem; /* Başlık altına boşluk ekliyoruz */
+    font-size: 1.6rem; /* Başlık boyutunu arttırabiliriz */
+    color: #510a56;
+}
+
+/* Logo stilini yuvarlak yapmak ve boyutlandırmak */
+.logo-image {
+    width: 150px; /* Logonun genişliği */
+    height: 150px; /* Logonun yüksekliği */
+    border-radius: 50%; /* Yuvarlak yapmak için */
+    margin-bottom: 1rem; /* Altına boşluk eklemek için */
+}
+
+.login-card label {
+    align-self: flex-start; /* Etiketleri sola hizalar */
+    margin-bottom: rem; /* Etiket ve input arasına boşluk ekler */
+    font-size: 1rem; /* Etiket font boyutunu belirler */
+    color: #510a56; /* Etiket rengini belirler */
+}
+/* Form alanlarının düzeni */
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Alanlar arasında boşluk bırakıyoruz */
+    width: 100%;
+    
+}
+
+/* Input alanı stilini belirleme */
+.login-card input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    margin: 0 auto; /* Genişliği %100 yapıyoruz */
+
+}
+
+/* Login butonunun ortalanması ve stilini belirleme */
+.login-card button {
+    padding: 0.75rem;
+    background-color: #510a56;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 60%; /* Butonun genişliği %60 yapıyoruz */
+    margin: 1.5rem auto; /* Yalnızca yatayda ortalamak için */
+    font-size: 1.1rem;
+}
+
+/* Butona hover efekti ekleme */
+.login-card button:hover {
+    background-color: #6f1a7d;
+}
+
+/* Link stilini belirleme */
+.login-page a {
+    color: #510a56;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-page a:hover {
+    text-decoration: underline;
+}

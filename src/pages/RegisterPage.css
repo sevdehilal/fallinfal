@@ -1,0 +1,49 @@
+.register-page {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Her form elemanı arasında boşluk bırakır */
+  }
+  
+  .register-form input,
+  .register-form select,
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .register-form button {
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-form button:hover {
+    background-color: purple;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,120 @@
+.client-profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+.client-profile-form-card {
+  width: 800px;
+  padding: 30px;
+  background-color: #ffffffb4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.client-profile-form-card h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #47024c;
+  text-transform: uppercase;
+}
+
+.client-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-pair {
+  display: flex;
+  gap: 15px;
+}
+
+.input-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-field input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+.client-profile-form button {
+  padding: 12px;
+  margin-top: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #360553, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.client-profile-form button:hover {
+  background: linear-gradient(135deg, #5e7ceb, #9068e3);
+  transform: translateY(-3px);
+}
+.input-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* İkonların konumunu ayarlamak için gerekli */
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* Sol taraftan boşluk bırakıldı (ikon için) */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  top: 35px; /* İkonun input ile hizalanması */
+  left: 10px; /* İkonun input içindeki konumu */
+  font-size: 16px;
+  color: #360553;
+}
+

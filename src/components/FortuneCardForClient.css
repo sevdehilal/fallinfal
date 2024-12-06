@@ -1,0 +1,53 @@
+.fortune-card {
+margin: 8!important ; /* Dikey boşluğu azalt */
+width: 750px !important;
+background-color: rgba(255, 255, 255, 0.6) !important;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+padding: 5px !important; /* İçerik etrafındaki boşluğu azalt */
+transition: all 0.3s ease;
+}
+  
+  
+.fortune-card:hover {
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fortune-card-image {
+width: 100%;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fortune-card-meta {
+padding-left: 16px;
+}
+
+.fortune-card-title {
+font-size: 18px;
+color: #5d1a05;
+}
+
+.fortune-card-date {
+font-size: 16px;
+font-weight: bold;
+color: #1a042c;
+}
+
+.fortune-card-divider {
+margin: 8px 0;
+}
+
+.fortune-card-status {
+font-size: 16px;
+font-weight: bold;
+}
+
+.fortune-card-status.answered {
+color: #388E3C;
+}
+
+.fortune-card-status.pending {
+color: #5f0707;
+}

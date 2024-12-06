@@ -1,0 +1,99 @@
+/* Genel sayfa stili */
+.earn-coins-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center;     /* Dikeyde ortalama */
+    height: 100vh;           /* Sayfanın tamamını kapla */
+    flex-direction: column;
+}
+
+.earn-coins-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Kartlar için stil */
+.reward-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sütunlu grid */
+    grid-template-rows: repeat(2, 1fr); /* 2 satır oluşturuyoruz */
+    gap: 20px; /* Kartlar arasındaki boşluğu 10px yapıyoruz */
+    justify-items: center; /* Kartları yatayda ortalama */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%; /* Kartların kapsayıcı yapısının genişliğini %100 yapıyoruz */
+}
+
+/* Her bir kartın stilini ayarlıyoruz */
+.reward-card {
+    width: 200px;  /* Kart genişliği */
+    height: 200px; /* Kart yüksekliği */
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz arka plan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0; /* Kartlar arasında ekstra margin eklenmemesi için */
+}
+
+/* Kart hover efekti */
+.reward-card:hover {
+    transform: scale(1.05); /* Hover ile büyüme efekti */
+}
+
+/* Kartta bulunan resmin boyutlarını ayarlıyoruz */
+.reward-card img {
+    width: 80%; /* Resim boyutunu %80 tutuyoruz */
+    height: 80%; /* Resim boyutunu %80 tutuyoruz */
+}
+
+/* Kart üzerindeki yazı stili */
+.reward-card span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Onay butonu stili */
+.confirm-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.confirm-button:hover {
+    background-color: darkgreen;
+}
+
+/* Ekran boyutuna uyumlu hale getirme */
+@media screen and (max-width: 768px) {
+    .reward-card-container {
+        grid-template-columns: repeat(2, 1fr); /* Mobilde 2 sütunlu grid */
+    }
+
+    .reward-card {
+        width: 250px; /* Kart boyutunu mobil için küçültüyoruz */
+        height: 250px; /* Kart yüksekliğini mobilde küçültüyoruz */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reward-card-container {
+        grid-template-columns: 1fr; /* Küçük ekranlar için tek sütun */
+    }
+
+    .reward-card {
+        width: 200px; /* Kart genişliğini küçük ekranlar için daha da küçültüyoruz */
+        height: 200px; /* Kart yüksekliğini küçültüyoruz */
+    }
+}

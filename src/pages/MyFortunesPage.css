@@ -1,0 +1,11 @@
+
+.my-fortunes-page .ant-tabs-tab {
+    color: white; 
+    font-size: 18px; 
+    font-weight: bold; 
+    
+}
+  
+.my-fortunes-page .ant-tabs-tab-active {
+    color: #690385 !important; 
+}
