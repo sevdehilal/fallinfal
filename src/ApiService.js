@@ -5,8 +5,8 @@ import FortuneCategory from './models/FortuneCategory';
 class ApiService {
     constructor() {
         this.apiUrl = "https://fallinfal.com/api/Auth/login"; // Login API URL
-        this.fortuneTellerUrl = "http://fallinfal.com/api/Client/GetAllFortuneTeller"; // Falcıların API URL'si
-        this.categoryUrl = "http://fallinfal.com/api/Category/GetAllCategory"; // Kategoriler için API URL
+        this.fortuneTellerUrl = "https://fallinfal.com/api/Client/GetAllFortuneTeller"; // Falcıların API URL'si
+        this.categoryUrl = "https://fallinfal.com/api/Category/GetAllCategory"; // Kategoriler için API URL
         this.saveFortuneUrl = "http://fallinfal.com/api/Application/AddApplication"; // Fal gönderme URL
         
     }

@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { User } from './models/User';
-import { FortuneTeller } from './models/FortuneTeller';
+
 
 const API_BASE_URL = 'https://fallinfal.com/api/Auth';
 

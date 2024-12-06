@@ -19,7 +19,7 @@ const ClientFortuneTellerList = () => {
       }
 
       const response = await fetch(
-        `http://fallinfal.com/api/Client/GetCredit?clientId=${clientId}`
+        `http://fallinfal.com/api/Client/GetCredit?clientId=${clientId}`,
       );
 
       if (response.ok) {

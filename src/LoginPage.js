@@ -4,6 +4,9 @@ import ApiService from './ApiService';
 import { Login } from './Login';
 import './LoginPage.css';
 import logo from './img/logo1.png';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from './firebase-config'; // Firebase yapılandırmanızı içe aktarın
+
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -46,65 +49,32 @@ const LoginPage = () => {
       setErrorMessage('Bir hata oluştu. Lütfen tekrar deneyin.');
     }
   };
-
+ 
+  
   const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+  
     try {
-      // Google login URL'sini aç
-      const popup = window.open(
-        'https://fallinfal.com/api/Auth/LoginGoogle',
-        '_blank',
-        'width=500,height=600'
-      );
+      // Google ile giriş için pop-up penceresi açıyoruz
+      const result = await signInWithPopup(auth, provider);
   
-      if (!popup) {
-        throw new Error('Popup penceresi açılamadı.');
-      }
+      // Giriş yapan kullanıcının bilgilerini alıyoruz
+      const user = result.user;
   
-      // Gelen response'ı yakalamak için mesaj dinleyicisi
-      const response = await new Promise((resolve, reject) => {
-        const messageHandler = (event) => {
-          if (event.origin !== 'https://fallinfal.com') {
-            console.error('Bilinmeyen domain:', event.origin);
-            return;
-          }
+      // UID'yi sayıya dönüştürme
+      const numericUserId = parseInt(user.uid.replace(/\D/g, ''), 10); // Alfanümerik karakterleri çıkararak sayıya dönüştürme
   
-          if (event.data?.success) {
-            resolve(event.data);
-          } else {
-            reject(new Error('Google Login başarısız.'));
-          }
-        };
+      console.log('Google Login User ID:', numericUserId); // Sayıya dönüştürülmüş ID'yi konsola yazdır
   
-        window.addEventListener('message', messageHandler, { once: true });
+      // LocalStorage'a kullanıcının bilgilerini kaydediyoruz
+      localStorage.setItem('userId', numericUserId);
+      
+      localStorage.setItem('authToken', await user.getIdToken());  // Firebase'den alınan idToken
   
-        const timeout = setTimeout(() => {
-          reject(new Error('Login işlemi zaman aşımına uğradı.'));
-        }, 60000);
-  
-        const interval = setInterval(() => {
-          if (popup.closed) {
-            clearInterval(interval);
-            clearTimeout(timeout);
-            reject(new Error('Pencere kapatıldı.'));
-          }
-        }, 500);
-      });
-  
-      // API response işleme
-      const { data } = response;
-  
-      // LocalStorage'a bilgileri kaydet
-      localStorage.setItem('userId', data.id || '');
-      localStorage.setItem('authToken', data.token || '');
-      localStorage.setItem(
-        'loggedInAs',
-        data.roles.includes('client') ? 'client' : 'fortuneteller'
-      );
-  
-      // Kullanıcıyı yönlendir
-      if (data.roles.includes('client')) {
+      // Eğer kullanıcı email doğrulandıysa client-dashboard'e, doğrulanmamışsa fortune teller dashboard'a yönlendiriyoruz
+      if (user.emailVerified) {
         navigate('/client-dashboard');
-      } else if (data.roles.includes('fortuneteller')) {
+      } else {
         navigate('/fortuneteller-dashboard');
       }
     } catch (error) {
@@ -112,6 +82,8 @@ const LoginPage = () => {
       setErrorMessage('Google girişinde bir hata oluştu.');
     }
   };
+  
+  
   
 
   return (
