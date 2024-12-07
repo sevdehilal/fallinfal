@@ -7,7 +7,7 @@ class ApiService {
         this.apiUrl = "https://fallinfal.com/api/Auth/login"; // Login API URL
         this.fortuneTellerUrl = "https://fallinfal.com/api/Client/GetAllFortuneTeller"; // Falcıların API URL'si
         this.categoryUrl = "https://fallinfal.com/api/Category/GetAllCategory"; // Kategoriler için API URL
-        this.saveFortuneUrl = "https://fallinfal.com/api/Application/AddApplication"; // Fal gönderme URL
+        this.saveFortuneUrl = "http://fallinfal.com/api/Application/AddApplication"; // Fal gönderme URL
         
     }
 
