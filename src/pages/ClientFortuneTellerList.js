@@ -14,12 +14,13 @@ const ClientFortuneTellerList = () => {
   const fetchClientCredit = async () => {
     try {
       const clientId = localStorage.getItem('userId'); // Kullanıcı ID'sini localStorage'dan alıyoruz
+      console.log(localStorage.getItem('userId'));
       if (!clientId) {
         throw new Error('Kullanıcı ID bulunamadı.');
       }
 
       const response = await fetch(
-        `http://fallinfal.com/api/Client/GetCredit?clientId=${clientId}`,
+        `https://fallinfal.com/api/Client/GetCredit?clientId=${clientId}`,
       );
 
       if (response.ok) {
